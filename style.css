@@ -437,7 +437,7 @@ footer {
   top: 162vh;      /* 110% da altura da tela */
   left: 80vw;      /* 75% da largura da tela */
   width: 18vw;     /* tamanho proporcional à largura da tela */
-  animation: float 8s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 
@@ -446,7 +446,7 @@ footer {
   top: 282vh;      /* 180% da altura da tela */
   right: 80vw;     /* 70% da largura da tela */
   width: 18vw;
-  animation: float 8s ease-in-out infinite;
+  animation: float 6s ease-in-out infinite;
 }
 
 @keyframes float {
