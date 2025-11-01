@@ -586,14 +586,6 @@ body {
 }
 
 
-/* === Responsivo (celular) === */
-@media (max-width: 900px) {
-  .doismundo {
-    grid-template-columns: 1fr; /* uma coluna só */
-  }
-}
-
-
 .titulo2 {
   font-size: 3rem;
   font-family: 'Style Script', cursive;
@@ -721,7 +713,7 @@ footer {
 .pass1,
 .pass2 {
   position: absolute;     /* Ficam fixas na tela (sempre por cima) */
-  z-index: 9999;       /* Garantido: sobre TUDO */
+  z-index: 100;       /* Garantido: sobre TUDO */
   pointer-events: none;/* Não atrapalha cliques em botões */
   overflow-x: hidden;
 }
