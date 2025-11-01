@@ -252,53 +252,83 @@ body {
   z-index: 2;
 }
 
-
-.video-section {
-  position: relative;
-  z-index: 2;
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+/* === Seção geral === */
+.meutrab {
+  padding: 60px 0; /* espaço acima e abaixo */
+  background-color: #f9fafb; /* cor de fundo clara */
 }
 
-.videos-container {
-  display: flex;
-  gap: 40px; /* espaço entre os vídeos */
-  flex-wrap: wrap; /* quebra de linha em telas pequenas */
-  justify-content: center;
+/* === Container: define que os dois cards ficam lado a lado === */
+.doismundos {
+  display: grid; /* cria um grid */
+  grid-template-columns: 1fr 1fr; /* duas colunas iguais */
+  gap: 40px; /* espaço entre elas */
+  max-width: 1200px; /* largura máxima da seção */
+  margin: 0 auto; /* centraliza o container na página */
+  padding: 0 20px;
+  
 }
 
-.videos-container video {
-  width: 400px;
-  max-width: 45%;
-  border-radius: 20px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
-  border: 2px solid rgba(255, 255, 255, 0.2);
-  transition: all 0.4s ease;
+/* === Cada card individual === */
+.col {
+  background: #ffffff; /* fundo branco */
+  border-radius: 16px; /* bordas arredondadas */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1); /* sombra suave */
+  padding: 20px; /* espaço interno */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* animação suave */
 }
 
-.videos-container video:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.4);
+/* === Efeito hover (quando passa o mouse) === */
+.col:hover {
+  transform: translateY(-5px); /* o card sobe um pouquinho */
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15); /* sombra mais forte */
 }
 
-video:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8);
-  border-color: rgba(255, 255, 255, 0.4);
+/* === Imagens dentro dos cards === */
+.fotosdemons- {
+  width: 50%; /* ocupa toda a largura do card */
+  height: auto; /* altura fixa */
+  object-fit: cover; /* corta a imagem sem distorcer */
+  border-radius: 10px; /* bordas arredondadas */
+  margin-bottom: 5%; /* espaço abaixo da imagem */
 }
-.doismundo {
-  position: relative;
-  z-index: 2; /* fica acima do overlay */
-  width: 100%;
-  height: 100%; /* ocupa toda a altura da seção */
-  display: flex;
-  justify-content: center; /* centraliza horizontalmente */
-  text-align: center;
-  margin-top: 20px;
+
+/* === Textos e títulos === */
+.col h1 {
+  font-family: 'Style script', cursive;
+  font-size: 4rem;
+  color: #111827;
+  margin-bottom: 10px;
 }
+.col p {
+  font-size: 1rem;
+  color: #374151;
+  line-height: 1.6;
+}
+.col p span {
+  color: #0ea5e9; /* cor azul de destaque */
+  font-weight: bold;
+}
+
+.decorativo {
+  flex-basis: 100%; /* ocupa toda a largura */
+  text-align: center; /* centraliza o conteúdo dentro */
+  margin-top: 40px; /* espaço entre os cards e ele */
+}
+.decorativo img {
+  width: 80%;
+  opacity: 0.6;
+  order: 3; /* força o elemento a ir para baixo dos cards */
+}
+
+
+/* === Responsivo (celular) === */
+@media (max-width: 900px) {
+  .doismundo {
+    grid-template-columns: 1fr; /* uma coluna só */
+  }
+}
+
 
 .titulo2 {
   font-size: 3rem;
