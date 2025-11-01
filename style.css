@@ -840,22 +840,3 @@ footer {
   margin-top: 10px;
 }
 
-
-/* =============================== */
-/* 🌍 RESPONSIVIDADE REFEITA DO ZERO */
-/* =============================== */
-
-/* ======== Telas grandes (≤ 1400px) ======== */
-@media (max-width: 1400px) {
-  .navbar .container {
-    padding: 0 4vw;
-  }
-
-  .titulo {
-    font-size: 3.2rem;
-  }
-
-  .about img {
-    max-width: 400px;
-  }
-}
